@@ -338,7 +338,7 @@ Liquid::Template.register_tag('fullwidth', Jekyll::RenderFullWidthTag)
 
 Enclose the code block in three backticks, followed by a space and then the language name, like this:
 
-<pre> <code>``` ruby
+<pre> <code>  ``` ruby
     module Jekyll
     blah, blah...
    ```</code> </pre>
