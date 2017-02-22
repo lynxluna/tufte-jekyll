@@ -2,9 +2,62 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  {% if site.google.site_verification %}
+  <meta name="google-site-verification" content="{{ site.google.site_verification }}" /> 
+  {% endif %}
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>{% if page.title %}{{ page.title }} - {{ site.name }}{% else %}{{ site.title }} - {{ site.description }} {% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:site_name" content="YKode.com" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+
+  {% if page.title %}
+  <meta property="og:type" content="website" />
+  <meta name="og:description" content="{{ site.description }}"/>
+  {% else %}
+  <meta property="og:type" content="article" />
+  <meta name="og:description" content="{{ page.excerpt | strip_html }}"/>
+  {% endif %}
+  <meta property="article:publisher" content="https://www.facebook.com/ykodecom" />
+  <meta property="og:locale" content="en_US" />
+
+  {% if page.title %}
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:description" content="{{ page.excerpt | strip_html }}" />
+  <meta name="twitter:title" content="{{ page.title }} - {{ site.name }}"/>
+  {% endif %}
+
+  {% if site.twitter.site %}
+  <meta name="twitter:site" content="@{{ site.twitter.site }}"/>
+  {% endif %}
+  <meta name="twitter:domain" content="YKode.com"/>
+  {% if page.author.twitter %}
+  <meta name="twitter:creator" content="@{{ page.author.twitter }}"/>
+  {% else %}
+  <meta name="twitter:creator" content="@{{ site.twitter.author }}"/>
+  {% endif %}
+  <meta name="description" content="{{ site.description }}" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 
   <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
   {% if site.data.options.lato_font_load %}
@@ -15,6 +68,8 @@
   {% if site.data.options.mathjax %}
     <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   {% endif %}
+
+
 
   <link rel="stylesheet" type="text/css" href="{{ "/css/tufte.css" | prepend: site.baseurl }}">
   <!-- <link rel="stylesheet" type="text/css" href="{{ "/css/print.css" | prepend: site.baseurl }}" media="print"> -->

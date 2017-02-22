@@ -1,7 +1,7 @@
 baseurl:
 title: YKode
 subtitle: Healthy Dose of Programming Related Stuffs
-author: D.Noor
+author: Didiet Noor
 simple_search: http://google.com/search
 description: Healthy Dose of Programming Related Stuff 
 name: Ykode
@@ -25,3 +25,13 @@ transfer:
   settings: -av
   source: _site/
   destination: ~/Git/clayh53.github.com/
+
+disqus: ykode
+
+google: 
+  site_verification: GJKUuI9BF9gJkW8MXtIjmey5capg1KjtaKjhb7kBcqU
+  analytics: UA-21914048-1
+
+twitter:
+  site: ykode
+  author: lynxluna
