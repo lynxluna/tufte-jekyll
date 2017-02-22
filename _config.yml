@@ -1,14 +1,14 @@
 baseurl:
-title: Tufte-Jekyll
-subtitle: Content-centric blogging
-author: clay harmon
+title: YKode
+subtitle: Healthy Dose of Programming Related Stuffs
+author: D.Noor
 simple_search: http://google.com/search
-description: A Jekyll theme for content-rich sites
-name: tufte
+description: Healthy Dose of Programming Related Stuff 
+name: Ykode
 markdown: kramdown
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-permalink: /articles/:short_year/:title
-timezone: America/New_York
+permalink: /:year/:month/:day/:title.html 
+timezone: Asia/Jakarta
 excerpt_separator: <!--more-->  # you can specify your own separator, of course.
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'UploadToGithub.Rakefile', 'README.md']
 post:
@@ -17,7 +17,7 @@ post:
 page:
   template: _page.txt
   extension: md
-editor: gvim
+editor: mvim
 git:
   branch: master
 transfer:

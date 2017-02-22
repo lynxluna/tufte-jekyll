@@ -2,21 +2,15 @@
 layout: post
 title: Thoughts on Java and JVM
 date: 2013-06-22 01:18:27.000000000 +07:00
-categories:
-- Opinion
-tags:
-- java
-- jvm
-status: publish
-type: post
-published: true
+categories: opinion
 ---
 
-I have very long relationship with Java. I came in contact with Java at my college study. I was
-shopping for new language besides C and C++ that I used it everyday. I use it to create [ActiveX
-Components](https://en.wikipedia.org/wiki/ActiveX) to be sold and consumed by Visual ~~ActiveX
-Editor~~ Basic, things like unzipping, eeading/writing binary files, let alone displaying 3D object.
-I got tired with C++ and decided on trying other language. And the first I encounter was Java.
+{% newthought 'I have very long relationship with Java' %}. I came in contact with Java at my college
+study. I was shopping for new language besides C and C++ that I used it everyday. I use it to create
+[ActiveX Components](https://en.wikipedia.org/wiki/ActiveX) to be sold and consumed by Visual
+~~ActiveX Editor~~ Basic, things like unzipping, reading/writing binary files, let alone displaying
+3D object.  I got tired with C++ and decided on trying other language. And the first I encounter was
+Java.
 
 <!--more-->
 
@@ -28,7 +22,7 @@ tutorials and courses about this once exciting language.
 The familiarity of the syntax enticed me to try the language. However, the more I used it the more I
 felt burden of using it. Let me explain..
 
-**First, It was slow. ** My computer was my trusty [Pentium 166
+{% newthought 'First, It was slow.' %} My computer was my trusty [Pentium 166
 MMX](http://www.cpu-world.com/CPUs/Pentium/Intel-Pentium%20MMX%20166%20-%20A80503166.html) with
 whopping 32 MB of RAM and 2 GB hard drive with Sound Blaster sound card. Not a recent spec for 2003,
 however I ran Visual C++ 6 just fine and made decent income to pay my tuition. Java was really a
@@ -63,56 +57,5 @@ extension, but they're moved on to BlackBerry 10 which doesn't use Java ME. And 
 C++ are _still_ the **most portable** language on the planet even if Sun demonized it in great
 extent. Almost all smartphone ecosystems nowadays support C and C++. 
 
-Since that time I stop coding in Java. I uninstalled it from my computer completely, before it is
-cool (hello Apple fanboys) and continue my life fed by C and C++, as well as Python and
-Coffeescript.
-
-However Java has one wonderful thing: **it's JVM** aka Java Virtual Machine.  The concept of having
-mulitithreaded Virtual Machine is great idea. JVM is still prominent in servers, where concurrency
-is the prime. And JVM could deliver a stable and mature virtual machine with safe multithreading.
-But Java as a language could not make thread-safe program to be easy (hello locks!).
-
-And one more thing...
-
-I'm now learning Scala... why? Because...
-
-This code
-
-```scala
-println("Hello World")  
-```
-
-is similar to this code
-
-```java  
-public class Hello {  
-  public static void Main( String[] args ) {  
-    System.out.println("Hello World");  
-  }  
-}  
-```
-
-and
-
-This code
-  
-```scala
-class Square( var width: Int, var height : Int ) {}  
-```
-
-is similar to
-
-```java  
-public class Square {  
-  private int _width;  
-  private int _height;  
-  public Square( int width, int height ) {  
-    _width = width;  
-    _height = height;  
-  }  
-}  
-```
-
-
-Still not convinced? Haven't I said that you can try Scala in interpreter style as well as an
-compiled form? Try [here](http://www.tryscala.com/)
+However Java has one wonderful thing: The JVM. The JVM is wonderful. It's mature and battle tested,
+if you want to create your next-gen software, JVM based languages are your best bet.
