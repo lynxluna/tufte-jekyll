@@ -29,19 +29,28 @@
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
 
   {% if page.title %}
-  <meta property="og:type" content="website" />
-  <meta name="og:description" content="{{ site.description }}"/>
-  {% else %}
   <meta property="og:type" content="article" />
   <meta name="og:description" content="{{ page.excerpt | strip_html }}"/>
+  {% else %}
+
+  <meta property="og:image" content="{{ site.url }}/assets/img/image-out.png" />
+  <meta property="og:type" content="website" />
+  <meta name="og:description" content="{{ site.description }}"/>
+
   {% endif %}
+  
   <meta property="article:publisher" content="https://www.facebook.com/ykodecom" />
   <meta property="og:locale" content="en_US" />
 
   {% if page.title %}
-  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:card" content="summary"/>
   <meta name="twitter:description" content="{{ page.excerpt | strip_html }}" />
   <meta name="twitter:title" content="{{ page.title }} - {{ site.name }}"/>
+  {% else %}
+  <meta name="twitter:card" content="summary_with_large_image" />
+  <meta name="twitter:description" content="{{ site.description }}" />
+  <meta name="twitter:title" content="{{ site.title }}" />
+  <meta nama="twitter:image" content="{{ site.url }}/assets/img/image-out.png" />
   {% endif %}
 
   {% if site.twitter.site %}
