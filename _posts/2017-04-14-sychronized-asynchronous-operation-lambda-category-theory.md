@@ -292,7 +292,7 @@ as {% m %}f: X \rightarrow Y{% em %}.
 
 {% marginfigure 'id-commut' 'assets/posts/CT_Commut_Diag.png' 'Category Theory as collection of objects,
 morphism, identity, and composition of morphism with its laws' %}With collection of objects and morphisms,
-there are laws regarding category. For each Category {% m %}C{% em %}:
+there are laws regarding category. For each Category {% m %}\mathscr C{% em %}:
 
 A {% newthought 'Composition' %} between morphism of {% m %}f:X \rightarrow Y{% em %} and {% m %}g: Y
 \rightarrow Z{% em %}, there must be a morphism denoted by {% m %}g \circ f: X \rightarrow Z{% em %}.
