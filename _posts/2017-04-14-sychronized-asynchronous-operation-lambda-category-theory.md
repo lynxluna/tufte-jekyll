@@ -282,7 +282,7 @@ deducing patterns.
 
 ### Category
 
-In Category Theory, *category* is a simple collections with
+So let go into Category Theory. By definition a {% newthought 'Category' %} is a simple collections with
 three components: a collection of {% newthought 'objects' %}, a collection of {% newthought 'morphism' %}, a
 notion of compositon of said morphism, and an identity.
 
@@ -305,6 +305,12 @@ The composition of morphisms is {% newthought 'Associative' %} so that {% m %}(h
 
 For programmer, **Objects** in Category Theory can be considered the same as **Types**. Morphism is the
 function between data types. This will help us to model our problem into categories within a problem domain. 
+
+Transforming, or morphing, between types are common when we're creating our application. The example above
+we transform from a HTTP Request to User DTO to User Domain Object to Screen State. So basically we're moving
+from one types to another, from one domain to another. A change of price in the catalogue can affect the
+order, and so on. The understanding of Category Theory may at least make us able to model and reason our
+problem domain.
 
 ## Summary
 
