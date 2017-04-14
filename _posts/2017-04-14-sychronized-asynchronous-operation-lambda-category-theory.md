@@ -203,7 +203,7 @@ If we imagine them to be values without operation, we basically compose two map 
 \begin{align}
 F&:UserName \Rightarrow User \\
 G&:UserName \Rightarrow Order \\
-F \circ G&: UserName \Rightarrow User \Rightarrow Order
+G \circ F&: UserName \Rightarrow User \Rightarrow Order
 \end{align}
 {% endmath %}
 
