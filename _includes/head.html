@@ -29,13 +29,13 @@
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
 
   {% if page.title %}
+  <meta property="og.image" content="{% if page.image %}{{ page.image }}{% else %}{{ site.url }}/assets/img/lambda-code-card.png{% endif %}" />
   <meta property="og:type" content="article" />
-  <meta name="og:description" content="{{ page.excerpt | strip_html }}"/>
+  <meta property="og:description" content="{{ page.excerpt | strip_html }}"/>
   {% else %}
-
-  <meta property="og:image" content="{{ site.url }}/assets/img/image-out.png" />
+  <meta property="og:image" content="{{ site.url }}/assets/img/lambda-code-card.png" />
   <meta property="og:type" content="website" />
-  <meta name="og:description" content="{{ site.description }}"/>
+  <meta property="og:description" content="{{ site.description }}"/>
 
   {% endif %}
   
@@ -43,15 +43,14 @@
   <meta property="og:locale" content="en_US" />
 
   {% if page.title %}
-  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:description" content="{{ page.excerpt | strip_html }}" />
   <meta name="twitter:title" content="{{ page.title }} - {{ site.name }}"/>
-  <meta name="twitter:image" content="{% if page.image %}{{ page.image }}{% else %}{{ site.url }}/assets/img/lambda-code.png{% endif %}" />
-  {% else %}
+  ε  {% else %}
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:description" content="{{ site.description }}" />
   <meta name="twitter:title" content="{{ site.title }}" />
-  <meta nama="twitter:image" content="{{ site.url }}/assets/img/image-out.png" />
+  <meta nama="twitter:image" content="{{ site.url }}/assets/img/lambda-code-card.png" />
   {% endif %}
 
   {% if site.twitter.site %}
