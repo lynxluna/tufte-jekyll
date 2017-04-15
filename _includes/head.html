@@ -29,7 +29,7 @@
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
 
   {% if page.title %}
-  <meta property="og.image" content="{% if page.image %}{{ page.image }}{% else %}{{ site.url }}/assets/img/lambda-code-card.png{% endif %}" />
+  <meta property="og:image" content="{% if page.image %}{{ page.image }}{% else %}{{ site.url }}/assets/img/lambda-code-card.png{% endif %}" />
   <meta property="og:type" content="article" />
   <meta property="og:description" content="{{ page.excerpt | strip_html }}"/>
   {% else %}
@@ -46,7 +46,9 @@
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:description" content="{{ page.excerpt | strip_html }}" />
   <meta name="twitter:title" content="{{ page.title }} - {{ site.name }}"/>
-  {% else %}
+
+  <meta name="twitter:image" content="{% if page.image %}{{ page.image }}{% else %}{{ site.url }}/assets/img/lambda-code-card.png{% endif %}" />
+{% else %}
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:description" content="{{ site.description }}" />
   <meta name="twitter:title" content="{{ site.title }}" />
