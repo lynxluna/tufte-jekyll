@@ -2,7 +2,6 @@
 layout: post
 title: "Synchronised Asynchronous Operation: My Journey to Category Theory" 
 date: 2017-04-13 00:18:27.000000000 +07:00
-image: https://www.ykode.com/assets/posts/coffee-lambda.jpg
 categories:
 - Programming
 - Category Theory
