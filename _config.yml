@@ -1,9 +1,9 @@
 baseurl:
 title: YKode
-subtitle: Healthy Dose of Programming Related Stuffs
+subtitle: Militant, Hard-core Coder
 author: Didiet Noor
 simple_search: http://google.com/search
-description: Healthy Dose of Programming Related Stuff 
+description: Healthy Dose of Hardcore Programming Related Stuff 
 name: Ykode
 markdown: kramdown
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"

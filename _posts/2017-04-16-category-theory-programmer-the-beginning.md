@@ -109,7 +109,7 @@ C{% em %}.
 and <math><mrow><mi>g</mi></mrow></math> within category 𝒞" %}
 
 In programming, composition is the same as applying one function to another. See code below written in
-Java.
+Kotlin.
 
 ```kotlin
 
@@ -162,7 +162,7 @@ the law can be represented by this:
 {% maincolumn 'assets/posts/ct/ct-assoc.png' 'Associativity law should hold between objects within category.' %}
 
 In programming, associativity holds for [functions](https://en.wikipedia.org/wiki/Pure_function). But when
-we're dealing with other categories such as Set, it maybe less obvious.
+we're dealing with other categories such as Set, it is less obvious.
 
 ## Composition and Programming
 
