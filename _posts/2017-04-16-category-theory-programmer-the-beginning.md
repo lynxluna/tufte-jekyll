@@ -13,32 +13,34 @@ status: draft
 type: post
 published: true
 ---
-{% marginfigure 'id-eilenberg' 'assets/posts/person/eilenberg.jpg' 'Samuel Eilenberg and Mac Lane introduces
-Category Theory on their paper titled "General Theory of Natural Equivalences" in 1945' %} 
-When I first heard about the word {% newthought "Category Theory" %} on my journey to functional programming,
-I was quick to dismiss it. I write codes for living, so I thought those are the mathematical models of
-something that has no value on my day-to-day job. Any article I read about CT is laden with math symbols I did
-not understand and the vocabulary is not familiar for me. I'm living in non-English speaking country, so
-English math vocabulary is a thing I'm studying at my 20s, not in my teenage years. So I didn't see any value
-of Category Theory on my programming. I can program just fine without any knowledge of Category Theory. I
-heard and I swept it under the rug.
 
-That changed when I realised steady stream of new languages claiming to be Functional Languages entering the
-mainstream. Libraries popping out to support functional style programming. I sense something changing in the
-programming world, and my foreboding become more apparent recently. Nowadays, the way people do programming is
-different compared to 10 years ago. Multicore is the *norm*, running on multiple small machines vs big
-mainframe is how you do big software nowadays. New techniques based on old ideas coming out. Programmers are
-now constantly put in a hot water of concurrency. It's hard to make sense and prove the program correctness
-nowadays. Software becomes so complex and it's easy to lose track.
+{% marginfigure 'id-eilenberg' 'assets/posts/person/eilenberg.jpg' 'Samuel Eilenberg and Mac Lane introduces
+Category Theory on their paper titled "General Theory of Natural Equivalences" in 1945' %} When I first heard
+about the word {% newthought "Category Theory" %} on my journey to functional programming, I was quick to
+dismiss it. I write codes for living, so I thought those are the mathematical models of something that has no
+value on my day-to-day job. Any article I read about CT is laden with math symbols I did not understand and
+the vocabulary was not familiar for me. I'm living in non-English speaking country, so English math vocabulary
+is a thing I'm studying at my 20s, not in my teenage years. I can program just fine without any knowledge of
+Category Theory. I heard and I swept it under the rug.
+
+That changed when I observe steady stream of new languages claiming to be Functional Languages entering the
+mainstream. Libraries pops out to support functional style programming on previously imperative languages. I
+sense something changing in the programming world, and my foreboding become more apparent recently. Nowadays,
+the way people do programming is different compared to 10 years ago. Multicore is the *norm*, running on
+multiple small machines is how you do big software nowadays, not on the big bulky mainframes. New techniques
+based on old ideas coming out. Programmers are now constantly put in a hot water of concurrency. It's getting
+harder and harder to make sense and prove the program correctness. Software becomes so complex and it's easy
+to lose track.
 
 <!--more-->
 
-We're in the middle of what physicisits will say a _phase transition_. Paradigm will shift due too multicore
-revolution and the cloud. Object Oriented Programming make sense in last century, but it starts to show
-cracks. It does not model concurrency and parallelism. Multi-threading doesn't really solve the problem. It
-introduces buggy design when used recklessly. People starts to face deadlock, livelock, starvation, and races
-everyday. Not only on single machine but also on their datacenter due to separation of processing onto
-multiple machines. We need something better to model and solve this problem.
+We're in the middle of what physicisits will say a _phase transition_. Paradigm is shifting due too multicore
+revolution and the ploriferation of cloud providers. Object Oriented Programming make sense in last century,
+but it starts to show cracks. It does not model concurrency and parallelism easily and correctly.
+Multi-threading doesn't really solve the problem. It introduces buggy design when used recklessly. People
+starts to face deadlock, livelock, starvation, and races everyday. Not only on single machine but also on
+their datacenters due to separation of processing onto multiple machines. We need something better to model and
+solve this problem.
 
 It turns out, computer operations can be modeled onto mathematics formula, axioms, and laws.  Something that
 hard to be made sense of, now can be proven. Mathematicians have been doing this for years, and now we can
@@ -49,7 +51,7 @@ is good on following instructions to the minute details. We're not, we tend to f
 Driven Development](https://en.wikipedia.org/wiki/Test-driven_development) to make sure our software is
 correct and consistent. We invent Domain Driven Design to abstract out our code and domain from the
 infrastructure nitty gritty. And now we have Category Theory to build the Domain Model and making sure of its
-correctness.
+correctness by working with types. Something that the compiler can verify quickly and correctly.
 
 ## 'The' Category
 
