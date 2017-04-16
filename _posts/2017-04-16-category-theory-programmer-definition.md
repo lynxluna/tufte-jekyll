@@ -13,7 +13,8 @@ status: draft
 type: post
 published: true
 ---
-
+{% marginfigure 'id-eilenberg' 'assets/posts/person/eilenberg.jpg' 'Samuel Eilenberg and Mac Lane introduces
+Category Theory on their paper titled "General Theory of Natural Equivalences" in 1945' %} 
 When I first heard about the word {% newthought "Category Theory" %} on my journey to functional programming,
 I was quick to dismiss it. I write codes for living, so I thought those are the mathematical models of
 something that has no value on my day-to-day job. Any article I read about CT is laden with math symbols I did
@@ -39,7 +40,7 @@ introduces buggy design when used recklessly. People starts to face deadlock, li
 everyday. Not only on single machine but also on their datacenter due to separation of processing onto
 multiple machines. We need something better to model and solve this problem.
 
-It turns out, computer operations can be modeled onto mathematics formula, axioms, and laws. Something that
+It turns out, computer operations can be modeled onto mathematics formula, axioms, and laws.  Something that
 hard to be made sense of, now can be proven. Mathematicians have been doing this for years, and now we can
 steal their knowledge to model our computation even before we go down to hours of coding session. 
 
@@ -106,17 +107,91 @@ C{% em %}.
 and <math><mrow><mi>g</mi></mrow></math> within category 𝒞" %}
 
 In programming, composition is the same as applying one function to another. See code below written in
-[Kotlin](https://kotlinlang.org).
+Java.
 
 ```kotlin
 
-val f: A -> B = { /* do something to A and returns B */ }
-val g: B -> C = { /* do something to B and returns C */ }
+fun <A, B> f(a: A): B { /* do something to A and returns B */ }
+fun <B, C> g(b: B): C { /* do something to B and returns C */ }
 
 // compose the function
-val gAfterf: A -> C = { a -> g(f(a)) };
+fun <A, C> gAfterf: (a: A): C = g(f(a)) 
 
-// using funKTionale 
-// https://github.com/MarioAriasC/funKTionale
-val gAfterf: A -> C = g compose f;
 ```
+
+We'll go back to composition later on. For now let's move on to the _Identity_ properties.
+
+## Category Laws
+
+Inside category, there are laws to be satisfied: the {% newthought 'Identity Law' %} and the {% newthought
+'Associativity Law' %}.
+
+### Identity Law
+
+Identity is a morphism form an object to itself which: For each object {% m %}X{% em %} in {% m %}\mathscr C{%
+em  %}, there's an identity {% m %}f: X \rightarrow X {% em %} so that for each {% m %}f: A \rightarrow B{% em
+%}
+
+{% math %}id_B \circ f = f = f \circ id_A{% endmath %}
+
+This can be expressed in picture:
+
+{% maincolumn 'assets/posts/ct/ct-identity.png' 'Identity property of morphism in Category' %}.
+
+In programming, a morphism is a function that returns the same value of the same type. Written in Kotlin:
+
+```kotlin
+fun <A> identity(a: A) = a
+```
+It seems to be useless. However, as Category Theory does not concern much about objects, but its morphisms.
+This identity morphism is essential for further study of Category Theory. Think identity morphism like number
+zero. It was made to express nothingness. Identity morphism express _no operation_.
+
+### Associativity Law
+
+Composition is associative. If we have morphism of {% m %}f{% em %}, {% m %}g{% em %}, {% m %}h{% em %} that
+can be composed. Meaning their objects match end-to-end, this associativity law holds:
+
+{% math %}h \circ g \circ f = (h \circ g) \circ f = h \circ (g \circ f){% endmath %}
+
+Therefore, we don't need to put parenthesis when expressing function composition. If you like pretty pictures,
+the law can be represented by this:
+
+{% maincolumn 'assets/posts/ct/ct-assoc.png' 'Associativity law should hold between objects within category.' %}
+
+In programming, associativity holds for [functions](https://en.wikipedia.org/wiki/Pure_function). But when
+we're dealing with other categories such as Set, it maybe less obvious.
+
+## Composition and Programming
+
+{% marginfigure 'id-miller' 'assets/posts/person/George_A_Miller.jpg' 'George A. Miller is American
+psychologist who had written coincidence between limit of short-term memory and one-dimensional judgement
+task.' %} When we code, we chop up our big problem into smaller problems and then to smaller units. In the
+context of domain driven design, we divide our program into domains. Each domains can consists of several
+services. Each services consists of many functions and every function consists of expressions. We compose
+these smaller parts to build the bigger parts. We do this because of limitation of our brain. A psychologist,
+George A. Miller has even said on his paper about this phenomena.
+
+A beautiful or elegan code is a chunk of code that can fit and digested easily by our brain. A good size of
+composable code has, to quote from [Barotz Milewski](https://bartoszmilewski.com): "Their surface area has to
+increase slower than their volume". The _surface area_ is the information we need to _compose_ code, the
+_volume_ is information we need to _implement_ them.
+
+One thing that struck me is that Category Theory doesn't want us to peek inside the object. An object is black
+box, a 'something'. We only know their properties by examining the relation between them. In Object-Oriented
+Programming this means that we model our program based on their interface (just surface area, no volume) with
+their methods is the morphism. The litmus test for non-composable program can be summarised to one sentence,
+this also paraphrased from Barotz Milewski:
+
+> The moment you have to peek and dive into implementation details to understand how to compose it with other
+> object. You've lost advantage of your programming paradigm.
+
+We access and services by their interfaces like REST API right? You should not even know how they work. All
+you know you want to compose your system or app with theirs. All you want to know is how to call them.
+
+# Summary
+
+This article is the discovery I made when I study Category Theory on my free time. It helps me decompose
+problem into composable smaller chunk and write less code to achieve same result. Hope this article can wet
+your appetite on studying and utilising Category Theory when you create code.
+
