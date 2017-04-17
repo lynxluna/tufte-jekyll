@@ -55,4 +55,6 @@ such product is _tuple_. So the model of tuple in category theory is as follows:
 
 {% maincolumn 'assets/posts/ct/ct-product.png' 'Product in Category Theory' %}
 
+So this is the definition from the Greekspeak:
 
+> Let {% m %}\mathscr C{% em %} the category with some objects {% m %}A{% em %} and {% m %}B{% em %}.
